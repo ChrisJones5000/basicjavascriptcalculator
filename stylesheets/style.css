@@ -1,0 +1,230 @@
+/*Free Code Camp Calculator
+Author: Chris Jones
+Date: 6/13/2016
+Requirements: 
+	1. Create a basic JavaScript calculator that fulfills the below user stories
+		a. I can add, substract, multiply, and divide two numbers.
+		b. I can clear the input field with a clear button.
+		c. I can keep chaining mathematical operations together until I hit the equal button, and the calculator will tell me the correct output.
+*/
+
+/**************************
+	FONTS
+**************************/
+
+@font-face {
+	font-family: "digital-7";
+	src:	
+		local('digital 7'),
+		local('digital-7'),
+		url('../fonts/digital-7.ttf')
+		format('truetype');
+}
+
+/**************************
+	BASE ELEMENT STYLES
+**************************/
+
+* {
+	box-sizing: border-box;
+} 
+
+body {
+	font-family: "Times New Roman", serif;
+	background: url("../images/old_moon_slice.png") repeat center center;
+}
+
+h2 {
+	font-family: "Dancing Script", cursive;
+	font-size: 2em;
+}
+
+h2,
+h3 {
+	letter-spacing: 2px;
+}
+
+button {
+	background: #333;
+	color: #EEE;
+	display: block;
+	width: 50px;
+	padding: 5px;
+	margin: 5px;
+	border: 1px solid #222;
+	border-radius: 5px;
+	box-shadow: 0 2px 0 #222;
+	position: relative;
+}
+
+button:hover {
+	cursor: pointer;
+	background: #444;
+}
+
+button:active,
+#equal-button:active {
+	box-shadow: none;
+	top: 2px;
+}
+
+/**************************
+	CONTAINER STYLES
+**************************/
+
+#calculator {
+	position: relative;
+	background: #333;
+	margin: 0 auto;
+	margin-top: 50px;
+	width: 400px;
+	box-shadow: 0 0 2px #333, 0 4px 2px 2px #444;
+	border: 2px solid #777;
+	border-radius: 15px 15px 5px 5px;
+}
+
+#headline {
+	position: relative;
+	top: 20px;
+	margin-left: 20px;
+	color: #EEE;
+}
+
+#buttons-container {
+	background: #555;
+	margin-top: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	font-size: 1.5em;
+	border-top: 2px solid #AAA;
+}
+
+/**************************
+	INTERFACE STYLES
+**************************/
+
+#headline h2,
+h3 {
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+#output {
+	font-family: "digital-7", monospace;
+	background: #DDD;
+	font-size: 2em;
+	text-align: right;
+	padding: 0 5px;
+	height: 80px;
+	width: 75%;
+	margin: 40px auto 0;
+	border: 2px solid #777;
+	box-shadow: inset 2px 2px 1px #333, inset -2px -2px 1px #333;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+#output > div {
+	position: relative;
+	height: 20%;
+	padding-top: 5px;
+}
+
+#primary-output {
+	position: relative;
+	top: 10px;
+	display: block;
+	height: 70%;
+	font-weight: 700;
+	-webkit-transition: all .2s;
+	transition: all .2s;
+}
+
+span#secondary-output {
+	position: absolute;
+	display: block;
+	font-size: .5em;
+	white-space: nowrap;
+	-webkit-transition: all .2s;
+	transition: all .2s;
+}
+
+#right-arrow,
+#left-arrow {
+	position: absolute;
+	top: 25%;
+	border-right: 8px solid transparent;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	border-left: 8px solid #FFF;
+	cursor: pointer;
+}
+
+#right-arrow {
+	right: 5%;
+}
+
+#left-arrow {
+	left: 5%;
+	border-right: 8px solid #FFF;
+	border-left: 8px solid transparent;
+}
+
+#equal-button {
+	height: 87px;
+	background: #639F94;
+	box-shadow: 0 2px 0 #4C7B72;
+	border: 1px solid #4C7B72;
+}
+
+#equal-button:hover {
+	background: #73B6AA;
+}
+
+.clear-button {
+	background: #991D0A;
+	box-shadow: 0 2px 0 #7C1707;
+	border: 1px solid #7C1707;
+}
+
+.clear-button:hover {
+	background: #B5230C;
+}
+
+
+
+/**************************
+	LAYOUT STYLES
+**************************/
+.col {
+	display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
