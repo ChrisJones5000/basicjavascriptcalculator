@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Basic Javascript Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
+    <link href="stylesheets/normalize.css" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <!--Calculator Container-->
+    <section id="calculator">
+      <section id="headline">
+        <h2>The Basics</h2>
+        <h3>A Basic JavaScript Calculator</h3>
+      </section>
+      <!--Output Container-->
+      <span class="arrow" id="left-arrow" title="leftArrow"></span>
+      <div id="output">   
+        <div><span id="secondary-output"></span></div>
+        <span id="primary-output"></span>
+      </div>
+      <span class="arrow" id="right-arrow"></span>
+      
+      <!--End Output-->
+      <!--User Interface-->
+      <section id="buttons-container">
+        <div class="row">
+          <div class="col">
+            <button>7</button>
+            <button>4</button>
+            <button>1</button>
+            <button>0</button>
+          </div>
+          <div class="col">
+            <button>8</button>
+            <button>5</button>
+            <button>2</button>
+            <button>00</button>
+          </div>
+          <div class="col">
+            <button>9</button>
+            <button>6</button>
+            <button>3</button>
+            <button>.</button>
+          </div>
+          <div class="col">
+            <button>&divide;</button>
+            <button>&times;</button>
+            <button>&minus;</button>
+            <button>&plus;</button>
+          </div>
+          <div class="col">
+            <button class="clear-button">AC</button>
+            <button class="clear-button">C</button>
+            <button id="equal-button">&equals;</button>
+          </div>
+        </div>
+      </section>
+      <!--End User Interface-->
+    </section>
+    <!--End Calculator Container-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
