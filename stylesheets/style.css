@@ -49,6 +49,7 @@ button {
 	color: #EEE;
 	display: block;
 	width: 50px;
+	height: 40px;
 	padding: 5px;
 	margin: 5px;
 	border: 1px solid #222;
@@ -172,7 +173,7 @@ span#secondary-output {
 }
 
 #equal-button {
-	height: 87px;
+	height: 84px;
 	background: #639F94;
 	box-shadow: 0 2px 0 #4C7B72;
 	border: 1px solid #4C7B72;
@@ -199,6 +200,8 @@ span#secondary-output {
 **************************/
 .col {
 	display: inline-block;
+	height: 100%;
+	vertical-align: top;
 }
 
 
